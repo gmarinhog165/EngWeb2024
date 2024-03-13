@@ -1,0 +1,14 @@
+{
+  "name": "tpc4",
+  "version": "1.0.0",
+  "description": "1. alterei o json de forma a criar os compositores e os periodos, em que os compositores terão o nome e identificador do periodo e o periodo tera todos os compositores e o id associado",
+  "main": "static.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.7"
+  }
+}
