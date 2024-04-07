@@ -1,0 +1,19 @@
+extends layout
+
+block content
+    .w3.ward4
+        header.w3-container.w3-teal
+            h1= "Lista de Periodos"
+        .w3-container
+          table.w3-table-all
+                tr
+                    th Id
+                    th Action
+                tr 
+                    each periodo in lista 
+                        td= periodo._id
+                        td 
+                            form(action=`/periodos/delete/${periodo._id}`, method="POST")
+                              button.w3-button.w3-red(type="submit") Apagar
+        footer.w3-container.w3-pink
+            address Gerado por EngWeb2024 em #{data} 

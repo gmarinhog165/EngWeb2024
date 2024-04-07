@@ -1,0 +1,31 @@
+extends layout
+
+block content
+    .w3-card-4 
+        header.w3-container.w3-purple 
+          h2= titulo 
+        form.w3-container(method="POST")
+            fieldset 
+                    legend Metadata 
+                    label Id 
+                    input.w3-input.w3-round(type="text" name="id" readonly value=data2._id)
+                    label Name 
+                    input.w3-input.w3-round(type="text" name="nome" value=data2.nome)
+                    label Bio
+                    input.w3-input.w3-round(type="text" name="bio" value=data2.bio)
+                    label Birth date 
+                    input.w3-input.w3-round(type="date" name="dataNasc" value=data2.dataNasc)
+                    label Death date 
+                    input.w3-input.w3-round(type="date" name="dataObito" value=data2.dataObito)
+            fieldset
+                legend Periodo 
+                each periodo in periodos
+                    if periodo._id == data2.periodo
+                      input.w3-radio(type="radio" name="periodo" value=periodo._id checked)
+                      label= periodo.id
+                    else
+                      input.w3-radio(type="radio" name="periodo" value=periodo._id)
+                      label= periodo._id
+
+                    
+            button.w3-btn.w3-purple.w3-mb-2(type="submit") Editar
